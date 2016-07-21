@@ -12,9 +12,14 @@
 		E5338FA61D3F7F4800DF433A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5338FA51D3F7F4800DF433A /* ViewController.m */; };
 		E5338FAB1D3F7F4800DF433A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5338FAA1D3F7F4800DF433A /* Assets.xcassets */; };
 		E5338FAE1D3F7F4800DF433A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5338FAC1D3F7F4800DF433A /* LaunchScreen.storyboard */; };
+		E5338FB71D40986400DF433A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5338FB61D40986400DF433A /* GoogleService-Info.plist */; };
+		EC86B6301980A39309C95A46 /* Pods_iOS8_FCM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5520498635A71FF35C34DDA8 /* Pods_iOS8_FCM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5520498635A71FF35C34DDA8 /* Pods_iOS8_FCM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS8_FCM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8208AD339C6852D3454F584 /* Pods-iOS8-FCM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS8-FCM.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS8-FCM/Pods-iOS8-FCM.release.xcconfig"; sourceTree = "<group>"; };
+		DA0B613DABC70072B8FBB654 /* Pods-iOS8-FCM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS8-FCM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS8-FCM/Pods-iOS8-FCM.debug.xcconfig"; sourceTree = "<group>"; };
 		E5338F9B1D3F7F4800DF433A /* iOS8-FCM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8-FCM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5338F9F1D3F7F4800DF433A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5338FA11D3F7F4800DF433A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		E5338FAA1D3F7F4800DF433A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5338FAD1D3F7F4800DF433A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5338FAF1D3F7F4800DF433A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5338FB61D40986400DF433A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "config/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC86B6301980A39309C95A46 /* Pods_iOS8_FCM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		371809CB08EF9DC7A579736E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5520498635A71FF35C34DDA8 /* Pods_iOS8_FCM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68D3A4715A140E47811DB20F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA0B613DABC70072B8FBB654 /* Pods-iOS8-FCM.debug.xcconfig */,
+				C8208AD339C6852D3454F584 /* Pods-iOS8-FCM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E5338F921D3F7F4800DF433A = {
 			isa = PBXGroup;
 			children = (
 				E5338F9D1D3F7F4800DF433A /* iOS8-FCM */,
 				E5338F9C1D3F7F4800DF433A /* Products */,
+				68D3A4715A140E47811DB20F /* Pods */,
+				371809CB08EF9DC7A579736E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,7 +88,6 @@
 				E5338FA51D3F7F4800DF433A /* ViewController.m */,
 				E5338FAA1D3F7F4800DF433A /* Assets.xcassets */,
 				E5338FAC1D3F7F4800DF433A /* LaunchScreen.storyboard */,
-				E5338FAF1D3F7F4800DF433A /* Info.plist */,
 				E5338F9E1D3F7F4800DF433A /* Supporting Files */,
 			);
 			path = "iOS8-FCM";
@@ -71,9 +96,19 @@
 		E5338F9E1D3F7F4800DF433A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E5338FB51D40985600DF433A /* config */,
 				E5338F9F1D3F7F4800DF433A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5338FB51D40985600DF433A /* config */ = {
+			isa = PBXGroup;
+			children = (
+				E5338FB61D40986400DF433A /* GoogleService-Info.plist */,
+				E5338FAF1D3F7F4800DF433A /* Info.plist */,
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5338FB21D3F7F4800DF433A /* Build configuration list for PBXNativeTarget "iOS8-FCM" */;
 			buildPhases = (
+				6A99CE856B24FCF2DD02D484 /* Check Pods Manifest.lock */,
 				E5338F971D3F7F4800DF433A /* Sources */,
 				E5338F981D3F7F4800DF433A /* Frameworks */,
 				E5338F991D3F7F4800DF433A /* Resources */,
+				64C5DB24A73B3E83884FC0D6 /* Embed Pods Frameworks */,
+				2C0B69097B86FFD4F72CF652 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -107,6 +145,15 @@
 				TargetAttributes = {
 					E5338F9A1D3F7F4800DF433A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H2T348L9SA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,10 +182,59 @@
 			files = (
 				E5338FAE1D3F7F4800DF433A /* LaunchScreen.storyboard in Resources */,
 				E5338FAB1D3F7F4800DF433A /* Assets.xcassets in Resources */,
+				E5338FB71D40986400DF433A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C0B69097B86FFD4F72CF652 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS8-FCM/Pods-iOS8-FCM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64C5DB24A73B3E83884FC0D6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS8-FCM/Pods-iOS8-FCM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A99CE856B24FCF2DD02D484 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5338F971D3F7F4800DF433A /* Sources */ = {
@@ -251,25 +347,33 @@
 		};
 		E5338FB31D3F7F4800DF433A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0B613DABC70072B8FBB654 /* Pods-iOS8-FCM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "iOS8-FCM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fabio.iOS8-FCM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		E5338FB41D3F7F4800DF433A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8208AD339C6852D3454F584 /* Pods-iOS8-FCM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "iOS8-FCM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fabio.iOS8-FCM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -292,6 +396,7 @@
 				E5338FB41D3F7F4800DF433A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
